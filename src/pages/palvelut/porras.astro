@@ -1,0 +1,88 @@
+---
+// src/pages/porraskaytavaremontit.astro
+import Layout from "../../layouts/Layout.astro";
+import Contactform from "../../components/Contactform.astro";
+---
+
+<Layout>
+  <!-- HERO / INTRO -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 py-20">
+    <div class="max-w-7xl mx-auto text-center space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bebas tracking-tight">
+        Porraskäytäväremontit
+      </h1>
+      <div class="max-w-3xl mx-auto space-y-4 text-base leading-relaxed">
+        <p>
+          Toteutamme laajat porraskäytäväremontit taloyhtiöille ammattitaidolla
+          ja kokemuksella. Meille on tärkeää, että lopputulos on sekä kestävä
+          että tyylikäs – ja sopii rakennuksen aikakauteen ja arkkitehtuuriin.
+        </p>
+        <p>
+          Porraskäytävä on kiinteistön käyntikortti, ja hyvin suunniteltu sekä
+          huolellisesti toteutettu remontti parantaa sekä asumisviihtyvyyttä
+          että kiinteistön arvoa. Kunnioitamme rakennuksen alkuperäistä henkeä
+          ja tuomme tilat takaisin parhaaseen loistoonsa – tyylikkäästi ja aikaa
+          kestävästi.
+        </p>
+        <p>
+          Hoidamme kokonaisuuden alusta loppuun sovitussa aikataulussa ja
+          sujuvassa yhteistyössä taloyhtiön kanssa.
+        </p>
+      </div>
+      <a
+        href="#contact-scroll"
+        class="inline-block bg-green-800 hover:bg-green-900 text-white font-bold text-lg py-4 px-8 rounded-full transition"
+      >
+        Pyydä tarjous porraskäytäväremontista
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY / CAROUSEL -->
+  <section class="bg-gray-300 py-20 overflow-hidden">
+    <div class="max-w-[2000px] mx-auto px-4">
+      <h2
+        class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
+      >
+        Töitämme
+      </h2>
+      <div class="relative overflow-hidden">
+        <div class="flex animate-scroll gap-6 whitespace-nowrap">
+          <!-- original set -->
+          <img
+            src="/images/sis5.jpeg"
+            alt="Porraskäytävän valkoiset seinät ja musta katto – sisämaalaus Repton Oy Helsinki"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis6.jpeg"
+            alt="Vihreä ja valkoinen porraskäytävä – sisäremontti koko näkökulmasta – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis7.jpeg"
+            alt="Valkoinen ja musta porraskäytävä ylhäältä alas kuvattuna – Repton Oy sisämaalaus"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+
+          <!-- duplicate set for seamless loop -->
+          <img
+            src="/images/sis5.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis6.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis7.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <Contactform />
+</Layout>

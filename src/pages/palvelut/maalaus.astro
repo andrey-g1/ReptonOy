@@ -1,0 +1,117 @@
+---
+// src/pages/julkisivujen-maalaus.astro
+import Layout from "../../layouts/Layout.astro";
+import Contactform from "../../components/Contactform.astro";
+---
+
+<Layout>
+  <!-- INTRO / HERO SECTION -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 py-20">
+    <div class="max-w-7xl mx-auto text-center space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bebas tracking-tight">
+        Julkisivujen maalaus
+      </h1>
+      <div class="max-w-3xl mx-auto space-y-4 text-base leading-relaxed">
+        <p>
+          Julkisivun maalaus suojaa rakennuksen ulkopintoja ja pidentää
+          rakenteiden käyttöikää tehokkaasti. Hyvin hoidettu julkisivu ei ole
+          vain tekninen suoja – se on myös koko kiinteistön käyntikortti.
+        </p>
+        <p>
+          Kokenut tiimimme maalaa julkisivut tarkasti ja huolellisesti –
+          kauniit, kestävät ja viimeistellyt pinnat ovat meille kunnia-asia.
+          Käytämme ainoastaan laadukkaita ja testattuja tuotteita, jotka
+          kestävät Suomen vaativat sääolosuhteet.
+        </p>
+        <p>
+          Toteutamme julkisivumaalauksia vuosittain laajasti: yksityisten
+          omakotitalojen maalaustöistä aina useiden rakennusten
+          asunto-osakeyhtiöiden kokonaisurakoihin. Kokemuksemme ja resurssimme
+          mahdollistavat sujuvan työnkulun kaiken kokoisissa projekteissa.
+        </p>
+      </div>
+
+      <a
+        href="#contact-scroll"
+        class="inline-block bg-green-800 hover:bg-green-900 text-white font-bold text-lg py-4 px-8 rounded-full transition"
+      >
+        Pyydä tarjous maalaustyöstä
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="bg-gray-300 py-20 overflow-hidden">
+    <div class="max-w-[2000px] mx-auto px-4">
+      <h2
+        class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
+      >
+        Töitämme
+      </h2>
+      <div class="relative overflow-hidden">
+        <div class="flex animate-scroll gap-6 whitespace-nowrap">
+          <!-- original set -->
+          <img
+            src="/images/sis2.jpeg"
+            alt="Omakotitalon julkisivun maalaus valkoiseksi – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis3.jpeg"
+            alt="Keltainen julkisivumaalaus omakotitalossa – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis4.jpeg"
+            alt="Ruskea ulkomaalaus omakotitaloon – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis2.jpeg"
+            alt="Valkoinen julkisivumaalaus omakotitaloon – Repton Oy ulkomaalaus Helsinki"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis3.jpeg"
+            alt="Keltainen ulkomaalaus omakotitalon julkisivuun – Repton Oy maalauspalvelu"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis4.jpeg"
+            alt="Repton Oy ruskea julkisivumaalaus omakotitaloon – ulkomaalaus Uudenmaan alueella"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+
+          <!-- duplicate for seamless loop -->
+          <img
+            src="/images/sis2.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis3.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis4.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis2.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis3.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/sis4.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <Contactform />
+</Layout>

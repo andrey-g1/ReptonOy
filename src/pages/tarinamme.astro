@@ -1,0 +1,69 @@
+---
+// src/pages/tarinamme.astro
+import Layout from "../layouts/Layout.astro";
+import Contactform from "../components/Contactform.astro";
+---
+
+<Layout>
+  <main class="bg-gray-300 min-h-screen pt-10">
+    <div class="max-w-5xl mx-auto px-4 space-y-16 py-16">
+      <!-- HEADER -->
+      <section class="text-center space-y-4">
+        <img
+          src="/images/logo1.png"
+          alt="Repton Oy logo"
+          class="mx-auto h-16 w-auto"
+        />
+        <h1 class="font-bebas text-4xl md:text-5xl text-gray-900">
+          Laadukasta maalaus- ja pintakäsittelypalvelua jo vuodesta 2002
+        </h1>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="relative" style="padding-top:56.25%">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/p5p-i-VW9Pw?si=yDFHkwaZF3oJv0aX"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <!-- ABOUT TEXT -->
+      <section class="text-gray-800 text-center space-y-6 leading-relaxed">
+        <p>
+          Olemme kotimainen, vuonna 2002 perustettu maalaus- ja
+          pintakäsittelyalan ammattiliike. Tavoitteenamme on tuottaa
+          asiakkaillemme kestävää ja laadukasta jälkeä niin remontti- kuin
+          maalaustöissäkin – aina luotettavasti ja ammattitaidolla.
+        </p>
+        <p>
+          Toimialueemme kattaa pääkaupunkiseudun ja Päijät-Hämeen, mutta
+          palvelemme joustavasti myös muualla Etelä-Suomessa asiakkaiden
+          tarpeiden mukaan.
+        </p>
+        <p>
+          Tiimimme koostuu kokeneista ammattilaisista, joilla on vankka
+          osaaminen muun muassa vesikattojen pesu- ja pinnoitustöissä,
+          porraskäytävien maalauksissa sekä julkisivuremonteissa. Laadukkaat
+          asuntoremontit toteutamme yhteistyössä luotettavan kumppaniverkostomme
+          kanssa.
+        </p>
+        <p>
+          Teemme jokaisen työn loppuun saakka kunnialla, tiiviissä yhteistyössä
+          asiakkaan kanssa. Jälkeemme jäävät kestävät ja huolella viimeistellyt
+          pinnat – meille vain tyytyväinen asiakas on valmis työ.
+        </p>
+        <p>
+          Palvelemme laajaa asiakaskuntaa: taloyhtiöitä, yrityksiä ja
+          yksityisasiakkaita.
+        </p>
+      </section>
+    </div>
+    <!-- CONTACT FORM -->
+    <Contactform />
+  </main>
+</Layout>

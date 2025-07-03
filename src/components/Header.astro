@@ -1,0 +1,124 @@
+---
+
+---
+
+// Header.astro
+<nav
+  class="bg-gradient-to-r from-black via-[#111111] to-[#1b1b1b] shadow-md fixed top-0 left-0 right-0 z-50 text-white font-bebas"
+>
+  <div
+    class="px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between h-16"
+  >
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="/" aria-label="Etusivu">
+        <img src="/images/logo.png" alt="Repton Oy logo" class="h-10" />
+      </a>
+    </div>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex space-x-6 items-center text-lg ml-auto">
+      <a href="/" class="hover:text-brand">Etusivu</a>
+      <a href="/tarinamme" class="hover:text-brand">Tarinamme</a>
+
+      <!-- Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center hover:text-brand">
+          Palvelut
+          <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <ul
+          class="absolute left-0 mt-2 w-56 bg-white text-gray-800 rounded shadow-lg hidden group-hover:flex flex-col z-20"
+        >
+          <li>
+            <a href="/palvelut/maalaus" class="px-4 py-2 hover:bg-gray-100"
+              >Julkisivujen maalaus</a>
+          </li>
+          <li>
+            <a
+              href="/palvelut/kattoremonttit"
+              class="px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a>
+          </li>
+          <li>
+            <a href="/palvelut/porras" class="px-4 py-2 hover:bg-gray-100"
+              >Porraskäytävät</a>
+          </li>
+          <li>
+            <a
+              href="/palvelut/sisaremonttit"
+              class="px-4 py-2 hover:bg-gray-100">Asuntoremontit</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/referenssit" class="hover:text-brand">Referenssit</a>
+      <a href="/yhteystiedot" class="hover:text-brand">Yhteystiedot</a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-data="{ open: false }" class="md:hidden">
+      <button
+        @click="open = !open"
+        :aria-expanded="open.toString()"
+        aria-controls="mobile-menu"
+        class="hover:text-brand pt-1"
+      >
+        ☰
+      </button>
+
+      <!-- Fullscreen mobile menu dropdown -->
+      <div
+        x-show="open"
+        x-transition
+        class="fixed top-16 left-0 right-0 bottom-0 bg-white text-gray-800 shadow-lg z-40 overflow-y-auto"
+        id="mobile-menu"
+      >
+        <div class="px-4 py-6 space-y-2 text-lg">
+          <a href="/" class="block px-4 py-2 hover:bg-gray-100">Etusivu</a>
+          <a href="/tarinamme" class="block px-4 py-2 hover:bg-gray-100"
+            >Tarinamme</a
+          >
+
+          <div>
+            <span class="block font-medium px-4 py-2">Palvelut</span>
+            <ul class="pl-4 space-y-1">
+              <li>
+                <a
+                  href="/palvelut/maalaus"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  >Julkisivujen maalaus</a>
+              </li>
+              <li>
+                <a
+                  href="/palvelut/kattoremonttit"
+                  class="block px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a>
+              </li>
+              <li>
+                <a
+                  href="/palvelut/porras"
+                  class="block px-4 py-2 hover:bg-gray-100">Porraskäytävät</a>
+              </li>
+              <li>
+                <a
+                  href="/palvelut/sisaremonttit"
+                  class="block px-4 py-2 hover:bg-gray-100">Asuntoremontit</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="/referenssit" class="block px-4 py-2 hover:bg-gray-100"
+            >Referenssit</a
+          >
+          <a href="/yhteystiedot" class="block px-4 py-2 hover:bg-gray-100"
+            >Yhteystiedot</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

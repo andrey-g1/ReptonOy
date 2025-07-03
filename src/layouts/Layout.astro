@@ -1,22 +1,107 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// This is the Layout component → it wraps all pages
+// It gives a consistent structure → header, footer, etc.
+// The <head> section here is CRITICAL for SEO!
+// Layout component → wraps all pages
+// Shared by all pages to keep consistent SEO + header + footer
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="fi" class="scroll-smooth">
+  <!-- Set language for SEO and accessibility -->
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Maalausliike Repton Oy",
+        "url": "https://www.repton.fi",
+        "logo": "https://www.repton.fi/images/logo.png",
+        "description": "Rakennus- ja maalauspalvelut Helsingissä, Uudellamaalla ja koko Suomessa.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+358400944054",
+          "contactType": "Customer Service",
+          "areaServed": "FI",
+          "availableLanguage": "Finnish"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Helsinki",
+          "addressCountry": "FI"
+        }
+      }
+    </script>
+
+    <!-- Perus SEO tunnisteet-->
+    <!-- Basic SEO tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Otsikkotunniste -->
+    <!-- Title tag: very important for SEO -->
+    <title>
+      Maalausliike Repton Oy | Rakennus- ja maalauspalvelut Helsingissä ja
+      Suomessa
+    </title>
+
+    <!-- Tämä autta meille olla ensimmäisena googlessa kun joku laittaa esim "maalauspalveluja suomessa" -->
+    <!-- Meta description: appears in Google search results -->
+    <meta
+      name="description"
+      content="Maalausliike Repton Oy tarjoaa ammattitaitoisia rakennus-, remontti- ja maalauspalveluja Helsingissä, Uudellamaalla ja Suomessa."
+    />
+
+    <!-- Logo tässä -->
+    <!-- Favicon (optional, but professional) -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp preview) -->
+    <meta
+      property="og:title"
+      content="Maalausliike Repton Oy | Rakennus- ja maalauspalvelut Suomessa"
+    />
+    <meta
+      property="og:description"
+      content="Maalausliike Repton Oy tarjoaa ammattitaitoisia rakennus- ja maalauspalveluja Helsingissä, Uudellamaalla ja Suomessa."
+    />
+    <meta property="og:image" content="/images/newbackground.jpg" />
+    <meta property="og:url" content="https://www.repton.fi" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card (Twitter/X preview) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Maalausliike Repton Oy | Rakennus- ja maalauspalvelut Suomessa"
+    />
+    <meta
+      name="twitter:description"
+      content="Maalausliike Repton Oy tarjoaa ammattitaitoisia rakennus- ja maalauspalveluja Helsingissä, Uudellamaalla ja Suomessa."
+    />
+    <meta name="twitter:image" content="/images/church.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer></script>
+  </head>
+
+  <body class="bg-gray-300">
+    <Header />
+    <main class="pt-10">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

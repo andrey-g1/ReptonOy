@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- HERO -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 py-20">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <h1 class="text-4xl md:text-5xl font-bebas">Yhteystiedot</h1>
+      <p class="text-lg">Ota yhteyttä – palvelemme mielellämme!</p>
+    </div>
+  </section>
+
+  <!-- GENERAL EMAIL BOX -->
+  <section class="bg-gray-300 px-4 -mt-12 mb-12">
+    <div
+      class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg px-8 py-6 text-center"
+    >
+      <h2 class="text-2xl font-semibold mb-2">Sähköpostitse</h2>
+      <p class="text-base mb-4">
+        Voit halutessasi lähettää meille viestin suoraan sähköpostitse:
+      </p>
+      <a
+        href="mailto:maalausliike@repton.fi"
+        class="inline-block bg-green-800 hover:bg-green-900 text-white font-bold text-lg py-3 px-6 rounded-full transition"
+      >
+        Lähetä sähköposti
+      </a>
+    </div>
+  </section>
+
+  <!-- TEAM CONTACT GRID -->
+  <section class="bg-gray-300 text-gray-900 px-4 py-16">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Jyrki Kuustie -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-10 text-center space-y-6 max-w-md mx-auto"
+      >
+        <img
+          src="/images/jyrkirepton.jpeg"
+          alt="Jyrki Kuustie – Repton Oy:n toimitusjohtaja"
+          class="mx-auto w-full max-w-[320px] h-auto rounded-lg object-cover shadow-md"
+        />
+        <h3 class="mt-4 text-3xl font-semibold">Jyrki Kuustie</h3>
+        <p class="text-green-800 font-medium text-xl">Toimitusjohtaja</p>
+        <p class="text-lg">
+          <strong>Puhelin:</strong>
+          <a
+            href="tel:+3584009444054"
+            class="text-green-800 hover:text-green-900 hover:underline"
+            >+358 40 094 4054</a
+          >
+        </p>
+        <p class="text-lg break-words">
+          <strong>Sähköposti:</strong>
+          <a
+            href="mailto:jyrki.kuustie@repton.fi"
+            class="text-green-800 hover:text-green-900 hover:underline"
+            >jyrki.kuustie@repton.fi</a
+          >
+        </p>
+      </div>
+
+      <!-- Rene Karjalainen -->
+      <div
+        class="bg-white rounded-xl shadow-lg p-10 text-center space-y-6 max-w-md mx-auto"
+      >
+        <img
+          src="/images/renerepton.jpeg"
+          alt="Rene – Repton Oy:n työnjohtaja"
+          class="mx-auto w-full max-w-[320px] h-auto rounded-lg object-cover shadow-md"
+        />
+        <h3 class="mt-4 text-3xl font-semibold">Rene Karjalainen</h3>
+        <p class="text-green-800 font-medium text-xl">Työnjohtaja</p>
+        <p class="text-lg">
+          <strong>Puhelin:</strong>
+          <a
+            href="tel:+358458023577"
+            class="text-green-800 hover:text-green-900 hover:underline"
+            >+358 45 802 3577</a
+          >
+        </p>
+        <p class="text-lg break-words">
+          <strong>Sähköposti:</strong>
+          <a
+            href="mailto:rene.karjalainen@repton.fi"
+            class="text-green-800 hover:text-green-900 hover:underline"
+            >rene.karjalainen@repton.fi</a
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contactform from "../components/Contactform.astro";
+---
+
+<Layout>
+  <!-- HERO / HEADER -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 py-20">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bebas tracking-tight">
+        Referenssit
+      </h1>
+      <p class="text-base">
+        <strong>Vain muutamia mainitaksemme:</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- REFERENCES LIST -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 pb-20">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Kanta-Loimaan kirkko, vesikaton maalaus</li>
+        <li>Helsingin Observatorio, vesikattojen maalaus</li>
+        <li>Helsingin Kansalliskirjasto, vesikattojen maalaus</li>
+        <li>Merikasarmi, vesikattojen maalaus</li>
+        <li>Turun akatemiatalo, vesikattojen maalaus</li>
+        <li>As. Oy Lehmuskallio, 21 paritalo-yhtiön maalaus</li>
+        <li>As. Oy Lehmusrinne, 10 talon-yhtiön maalaus</li>
+      </ul>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Bostads A.B Ruusula N:o 1, 120 kpl ikkunoiden huoltomaalaukset</li>
+        <li>As. Oy Laivurinkatu 39, 260 kpl ikkunoiden huoltomaalaukset</li>
+        <li>As. Oy Teppo, 5 porraskäytävän remontti</li>
+        <li>As. Oy Mikonkatu 20, porraskäytäväremontti</li>
+        <li>As. Oy Fredrikinkatu 19, porraskäytäväremontti</li>
+        <li>As. Oy Arkadiankatu 15, porraskäytäväremontti</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <Contactform />
+</Layout>

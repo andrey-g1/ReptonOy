@@ -1,0 +1,118 @@
+---
+// src/pages/asuntoremontit.astro
+import Layout from "../../layouts/Layout.astro";
+import Contactform from "../../components/Contactform.astro";
+---
+
+<Layout>
+  <!-- HERO / INTRO -->
+  <section class="bg-gray-300 text-gray-900 font-montserrat px-4 py-20">
+    <div class="max-w-7xl mx-auto text-center space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bebas tracking-tight">
+        Asuntoremontit
+      </h1>
+      <div class="max-w-3xl mx-auto space-y-4 text-base leading-relaxed">
+        <p>
+          Tarjoamme monipuoliset asuntoremonttipalvelut avaimet käteen
+          -periaatteella. Teemme kaikenlaiset sisäremontit huolella ja sovitussa
+          aikataulussa – aina asiakkaan toiveita kuunnellen.
+        </p>
+        <p>
+          Palveluihimme kuuluvat muun muassa: kalusteasennukset,
+          lattia-asennukset, maalaus- ja pintakäsittelytyöt sekä seinäpintojen
+          kunnostus ja tasoitetyöt.
+        </p>
+        <p>
+          Laajan ja osaavan yhteistyöverkostomme kautta toteutamme myös
+          kylpyhuoneremontit, sähkötyöt ja putkityöt.
+        </p>
+        <p>
+          Olipa kyseessä pieni pintaremontti tai koko asunnon uudistus, hoidamme
+          työn alusta loppuun laadukkaasti – ja pidämme huolen, että lopputulos
+          kestää aikaa ja käyttöä.
+        </p>
+      </div>
+      <a
+        href="#contact-scroll"
+        class="inline-block bg-green-800 hover:bg-green-900 text-white font-bold text-lg py-4 px-8 rounded-full transition"
+      >
+        Pyydä tarjous asuntoremontista
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY / CAROUSEL -->
+  <section class="bg-gray-300 py-20 overflow-hidden">
+    <div class="max-w-[2000px] mx-auto px-4">
+      <h2
+        class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
+      >
+        Töitämme
+      </h2>
+      <div class="relative overflow-hidden">
+        <div class="flex animate-scroll gap-6 whitespace-nowrap">
+          <!-- original set -->
+          <img
+            src="/images/rem1.jpeg"
+            alt="Terassiremontti ulkotilaan – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem2.jpeg"
+            alt="Keittiöremontti mustavalkoisella sävytyksellä – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem3.jpeg"
+            alt="Valkomusta keittiöremontti modernilla ilmeellä – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem4.jpeg"
+            alt="Vaalea keittiöremontti skandinaavisella tyylillä – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem5.jpeg"
+            alt="Toinen keittiöremontti mustavalkoisessa värimaailmassa – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem6.jpeg"
+            alt="Keittiöremontti sisäpihan näkökulmasta, valkomusta viimeistely – Repton Oy"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+
+          <!-- duplicate for seamless loop -->
+          <img
+            src="/images/rem1.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem2.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem3.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem4.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem5.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+          <img
+            src="/images/rem6.jpeg"
+            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <Contactform />
+</Layout>
