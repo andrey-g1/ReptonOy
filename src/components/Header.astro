@@ -37,21 +37,25 @@
         >
           <li>
             <a href="/palvelut/maalaus" class="px-4 py-2 hover:bg-gray-100"
-              >Julkisivujen maalaus</a>
+              >Julkisivujen maalaus</a
+            >
           </li>
           <li>
             <a
               href="/palvelut/kattoremonttit"
-              class="px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a>
+              class="px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a
+            >
           </li>
           <li>
             <a href="/palvelut/porras" class="px-4 py-2 hover:bg-gray-100"
-              >Porraskäytävät</a>
+              >Porraskäytävät</a
+            >
           </li>
           <li>
             <a
               href="/palvelut/sisaremonttit"
-              class="px-4 py-2 hover:bg-gray-100">Asuntoremontit</a>
+              class="px-4 py-2 hover:bg-gray-100">Asuntoremontit</a
+            >
           </li>
         </ul>
       </div>
@@ -61,63 +65,69 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div x-data="{ open: false }" class="md:hidden">
-      <button
-        @click="open = !open"
-        :aria-expanded="open.toString()"
-        aria-controls="mobile-menu"
-        class="hover:text-brand pt-1"
+    <div class="md:hidden relative z-50">
+      <!-- Hidden checkbox to track menu state -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+      <!-- Hamburger Button -->
+      <label
+        for="menu-toggle"
+        class="cursor-pointer hover:text-brand pt-1 block"
       >
         ☰
-      </button>
+      </label>
 
-      <!-- Fullscreen mobile menu dropdown -->
+      <!-- Fullscreen mobile menu -->
       <div
-        x-show="open"
-        x-transition
-        class="fixed top-16 left-0 right-0 bottom-0 bg-white text-gray-800 shadow-lg z-40 overflow-y-auto"
-        id="mobile-menu"
+        class="peer-checked:flex hidden fixed top-16 left-0 right-0 bottom-0 bg-white text-gray-800 shadow-lg overflow-y-auto flex-col px-4 py-6 space-y-2 text-lg"
       >
-        <div class="px-4 py-6 space-y-2 text-lg">
-          <a href="/" class="block px-4 py-2 hover:bg-gray-100">Etusivu</a>
-          <a href="/tarinamme" class="block px-4 py-2 hover:bg-gray-100"
-            >Tarinamme</a
-          >
+        <label
+          for="menu-toggle"
+          class="absolute top-4 right-4 text-2xl cursor-pointer">✕</label
+        >
 
-          <div>
-            <span class="block font-medium px-4 py-2">Palvelut</span>
-            <ul class="pl-4 space-y-1">
-              <li>
-                <a
-                  href="/palvelut/maalaus"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Julkisivujen maalaus</a>
-              </li>
-              <li>
-                <a
-                  href="/palvelut/kattoremonttit"
-                  class="block px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a>
-              </li>
-              <li>
-                <a
-                  href="/palvelut/porras"
-                  class="block px-4 py-2 hover:bg-gray-100">Porraskäytävät</a>
-              </li>
-              <li>
-                <a
-                  href="/palvelut/sisaremonttit"
-                  class="block px-4 py-2 hover:bg-gray-100">Asuntoremontit</a>
-              </li>
-            </ul>
-          </div>
+        <a href="/" class="block px-4 py-2 hover:bg-gray-100">Etusivu</a>
+        <a href="/tarinamme" class="block px-4 py-2 hover:bg-gray-100"
+          >Tarinamme</a
+        >
 
-          <a href="/referenssit" class="block px-4 py-2 hover:bg-gray-100"
-            >Referenssit</a
-          >
-          <a href="/yhteystiedot" class="block px-4 py-2 hover:bg-gray-100"
-            >Yhteystiedot</a
-          >
+        <div>
+          <span class="block font-medium px-4 py-2">Palvelut</span>
+          <ul class="pl-4 space-y-1">
+            <li>
+              <a
+                href="/palvelut/maalaus"
+                class="block px-4 py-2 hover:bg-gray-100"
+                >Julkisivujen maalaus</a
+              >
+            </li>
+            <li>
+              <a
+                href="/palvelut/kattoremonttit"
+                class="block px-4 py-2 hover:bg-gray-100">Kattojen maalaus</a
+              >
+            </li>
+            <li>
+              <a
+                href="/palvelut/porras"
+                class="block px-4 py-2 hover:bg-gray-100">Porraskäytävät</a
+              >
+            </li>
+            <li>
+              <a
+                href="/palvelut/sisaremonttit"
+                class="block px-4 py-2 hover:bg-gray-100">Asuntoremontit</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <a href="/referenssit" class="block px-4 py-2 hover:bg-gray-100"
+          >Referenssit</a
+        >
+        <a href="/yhteystiedot" class="block px-4 py-2 hover:bg-gray-100"
+          >Yhteystiedot</a
+        >
       </div>
     </div>
   </div>

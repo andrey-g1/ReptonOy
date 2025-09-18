@@ -40,77 +40,134 @@ import Contactform from "../../components/Contactform.astro";
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
-  <section class="bg-gray-300 py-20 overflow-hidden">
+  <!-- GALLERY SECTION: Julkisivujen Maalaus -->
+  <section class="bg-gray-300 py-20 overflow-hidden font-montserrat">
     <div class="max-w-[2000px] mx-auto px-4">
       <h2
         class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
       >
-        Töitämme
+        Julkisivujen Maalaus
       </h2>
-      <div class="relative overflow-hidden">
-        <div class="flex animate-scroll gap-6 whitespace-nowrap">
-          <!-- original set -->
-          <img
-            src="/images/sis2.jpeg"
-            alt="Omakotitalon julkisivun maalaus valkoiseksi – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis3.jpeg"
-            alt="Keltainen julkisivumaalaus omakotitalossa – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis4.jpeg"
-            alt="Ruskea ulkomaalaus omakotitaloon – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis2.jpeg"
-            alt="Valkoinen julkisivumaalaus omakotitaloon – Repton Oy ulkomaalaus Helsinki"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis3.jpeg"
-            alt="Keltainen ulkomaalaus omakotitalon julkisivuun – Repton Oy maalauspalvelu"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis4.jpeg"
-            alt="Repton Oy ruskea julkisivumaalaus omakotitaloon – ulkomaalaus Uudenmaan alueella"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
 
-          <!-- duplicate for seamless loop -->
+      <!-- HORIZONTAL SCROLLABLE IMAGE ROW -->
+      <div class="overflow-x-auto scroll-smooth">
+        <div class="flex gap-6 whitespace-nowrap">
+          <!-- Julkisivut -->
           <img
-            src="/images/sis2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk1.jpeg"
+            alt="Julkisivumaalaus – kerrostalon punainen peltikatto kaupunginäkymällä"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis3.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk2.jpeg"
+            alt="Julkisivumaalaus – valkoinen puutalo huoltomaalauksen jälkeen"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis4.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk3.jpeg"
+            alt="Julkisivumaalaus – kaksikerroksinen puutalo vaaleilla sävyillä"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk4.jpeg"
+            alt="Julkisivumaalaus – kerrostalon vaalea ulkoseinä viimeisteltynä"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis3.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk5.jpeg"
+            alt="Julkisivumaalaus – kivitalon ulkoseinä ennen ja jälkeen maalauksen"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis4.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk6.jpeg"
+            alt="Julkisivumaalaus – moderni valkoinen puutalo maalauksen jälkeen"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          />
+          <img
+            src="/images/julk7.jpeg"
+            alt="Julkisivumaalaus – perinteinen hirsitalo maalattuna"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
         </div>
       </div>
     </div>
   </section>
+
+  <!-- FULLSCREEN MODAL -->
+  <div
+    id="modal"
+    class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden justify-center items-center"
+  >
+    <button
+      id="closeModal"
+      class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition"
+      aria-label="Sulje">✕</button
+    >
+
+    <!-- Prev button (mobile only) -->
+    <button
+      id="prevImage"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition md:hidden"
+      aria-label="Edellinen kuva">‹</button
+    >
+
+    <!-- Next button (mobile only) -->
+    <button
+      id="nextImage"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition md:hidden"
+      aria-label="Seuraava kuva">›</button
+    >
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Näyttökuva"
+      class="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+    />
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script type="module">
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+    const prevBtn = document.getElementById("prevImage");
+    const nextBtn = document.getElementById("nextImage");
+
+    const images = [...document.querySelectorAll(".gallery-image")];
+    let currentIndex = 0;
+
+    function isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    }
+
+    function openModal(index) {
+      if (!isMobile()) return;
+      currentIndex = index;
+      modalImage.src = images[currentIndex].src;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modalImage.src = "";
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImage.src = images[currentIndex].src;
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImage.src = images[currentIndex].src;
+    });
+
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => openModal(index));
+    });
+  </script>
 
   <!-- CONTACT FORM -->
   <Contactform />

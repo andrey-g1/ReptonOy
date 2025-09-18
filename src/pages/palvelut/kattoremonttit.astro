@@ -37,76 +37,245 @@ import Contactform from "../../components/Contactform.astro";
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
-  <section class="bg-gray-300 py-20 overflow-hidden">
+  <!-- GALLERY SECTION: Kattotyöt -->
+  <section class="bg-gray-300 py-20 font-montserrat">
     <div class="max-w-[2000px] mx-auto px-4">
       <h2
         class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
       >
-        Töitämme
+        Kattotyöt
       </h2>
-      <div class="relative overflow-hidden">
-        <div class="flex animate-scroll gap-6 whitespace-nowrap">
-          <!-- original set -->
-          <img
-            src="/images/kat1.jpeg"
-            alt="Katon maalausprojekti mustalla värillä – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat2.jpeg"
-            alt="Kirkon katon pinnoitusprojekti – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat3.jpeg"
-            alt="Valmis kattoremontti mustalla katolla – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat4.jpeg"
-            alt="Kattotyö käynnissä mustalla tiilikatolla – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat5.jpeg"
-            alt="Kattoremontti tiimimme työssä mustalla katolla – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat6.jpeg"
-            alt="Punainen tiilikatto valmis remontin jälkeen – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
 
-          <!-- duplicate for seamless loop -->
-          <img
-            src="/images/kat1.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat3.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat4.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat5.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/kat6.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-        </div>
+      <!-- Scrollable image row -->
+      <div
+        class="overflow-x-auto whitespace-nowrap flex gap-6 pb-4 scroll-smooth"
+      >
+        <img
+          src="/images/kat1.jpeg"
+          alt="Kattotyöt – peltikatto lähikuvassa"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat1.jpeg')"
+        />
+        <img
+          src="/images/kat2.jpeg"
+          alt="Kattotyöt – vaalea harmaa peltikatto savupiipuilla"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat2.jpeg')"
+        />
+        <img
+          src="/images/kat3.jpeg"
+          alt="Kattotyöt – työntekijä peltikatolla"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat3.jpeg')"
+        />
+        <img
+          src="/images/kat4.jpeg"
+          alt="Kattotyöt – vanhan rakennuksen kattorakenteet"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat4.jpeg')"
+        />
+        <img
+          src="/images/kat5.jpeg"
+          alt="Kattotyöt – peltikatto kaupunkitalojen keskellä"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat5.jpeg')"
+        />
+        <img
+          src="/images/kat6.jpeg"
+          alt="Kattotyöt – laaja peltikatto yksityiskohtaisella rakenteella"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat6.jpeg')"
+        />
+        <img
+          src="/images/kat7.jpeg"
+          alt="Kattotyöt – historiallinen kirkko kupolikattoineen"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat7.jpeg')"
+        />
+        <img
+          src="/images/kat8.jpeg"
+          alt="Kattotyöt – puinen terassi ja kattorakenne"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat8.jpeg')"
+        />
+        <img
+          src="/images/kat9.jpeg"
+          alt="Kattotyöt – peltikatto työn aikana"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat9.jpeg')"
+        />
+        <img
+          src="/images/kat10.jpeg"
+          alt="Kattotyöt – moderni peltikatto"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat10.jpeg')"
+        />
+        <img
+          src="/images/kat11.jpeg"
+          alt="Kattotyöt – peltikatto yleiskuva"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat11.jpeg')"
+        />
+        <img
+          src="/images/kat12.jpeg"
+          alt="Kattotyöt – tumma peltikatto"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat12.jpeg')"
+        />
+        <img
+          src="/images/kat13.jpeg"
+          alt="Kattotyöt – vaalea peltikatto"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat13.jpeg')"
+        />
+        <img
+          src="/images/kat14.jpeg"
+          alt="Kattotyöt – kattonäkymä"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat14.jpeg')"
+        />
+        <img
+          src="/images/kat15.jpeg"
+          alt="Kattotyöt – katto yleiskuva"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat15.jpeg')"
+        />
+        <img
+          src="/images/kat16.jpeg"
+          alt="Kattotyöt – peltikaton yleiskuva"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat16.jpeg')"
+        />
+        <img
+          src="/images/kat17.jpeg"
+          alt="Kattotyöt – kattopinnan yleiskuva"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat17.jpeg')"
+        />
+        <img
+          src="/images/kat18.jpeg"
+          alt="Kattotyöt – peltikatto lähikuva"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat18.jpeg')"
+        />
+        <img
+          src="/images/kat19.jpeg"
+          alt="Kattotyöt – kattonäkymä kaupunkiympäristössä"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat19.jpeg')"
+        />
+        <img
+          src="/images/kat20.jpg"
+          alt="Kattotyöt – vaalea peltikatto kirkasta taivasta vasten"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          onclick="openModal('/images/kat20.jpg')"
+        />
       </div>
     </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/80 z-50 hidden justify-center items-center p-4"
+    >
+      <div class="relative max-w-4xl w-full">
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition"
+          aria-label="Sulje">✕</button
+        >
+
+        <!-- Prev / Next (mobile only) -->
+        <button
+          id="prevImage"
+          class="md:hidden absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition"
+          aria-label="Edellinen kuva">‹</button
+        >
+        <button
+          id="nextImage"
+          class="md:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition"
+          aria-label="Seuraava kuva">›</button
+        >
+
+        <img
+          id="modalImage"
+          src=""
+          alt="Näyttökuva"
+          class="w-full max-h-[80vh] object-contain rounded-lg"
+        />
+      </div>
+    </div>
+
+    <!-- Script: mobile-only modal + prev/next + swipe; desktop clicks ignored -->
+    <script type="module">
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const closeModalBtn = document.getElementById("closeModal");
+      const prevBtn = document.getElementById("prevImage");
+      const nextBtn = document.getElementById("nextImage");
+      const images = [...document.querySelectorAll(".gallery-image")];
+
+      let currentIndex = 0;
+      const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+      function openModalIndex(index) {
+        if (!isMobile()) return; // ignore on desktop
+        currentIndex = index;
+        modalImage.src = images[currentIndex].getAttribute("src");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      // keep inline onclicks working
+      window.openModal = (src) => {
+        if (!isMobile()) return;
+        const idx = images.findIndex((img) => img.getAttribute("src") === src);
+        openModalIndex(idx >= 0 ? idx : 0);
+      };
+
+      // also support clicking images directly
+      images.forEach((img, i) => {
+        img.addEventListener("click", () => openModalIndex(i));
+      });
+
+      function closeModal() {
+        modal.classList.add("hidden");
+        modalImage.src = "";
+      }
+      closeModalBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImage.src = images[currentIndex].getAttribute("src");
+      });
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImage.src = images[currentIndex].getAttribute("src");
+      });
+
+      // swipe support
+      let startX = 0;
+      modal.addEventListener(
+        "touchstart",
+        (e) => {
+          startX = e.touches[0].clientX;
+        },
+        { passive: true },
+      );
+      modal.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const dx = endX - startX;
+        if (Math.abs(dx) > 40) {
+          if (dx > 0) prevBtn.click();
+          else nextBtn.click();
+        }
+      });
+    </script>
   </section>
 
   <!-- CONTACT FORM -->

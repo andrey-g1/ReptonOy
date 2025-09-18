@@ -1,16 +1,11 @@
 ---
-// This is the Layout component → it wraps all pages
-// It gives a consistent structure → header, footer, etc.
-// The <head> section here is CRITICAL for SEO!
-// Layout component → wraps all pages
-// Shared by all pages to keep consistent SEO + header + footer
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <html lang="fi" class="scroll-smooth">
-  <!-- Set language for SEO and accessibility -->
   <head>
+    <!-- Organization Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -34,30 +29,22 @@ import Footer from "../components/Footer.astro";
       }
     </script>
 
-    <!-- Perus SEO tunnisteet-->
-    <!-- Basic SEO tags -->
+    <!-- Basic SEO + Meta -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Otsikkotunniste -->
-    <!-- Title tag: very important for SEO -->
     <title>
       Maalausliike Repton Oy | Rakennus- ja maalauspalvelut Helsingissä ja
       Suomessa
     </title>
-
-    <!-- Tämä autta meille olla ensimmäisena googlessa kun joku laittaa esim "maalauspalveluja suomessa" -->
-    <!-- Meta description: appears in Google search results -->
     <meta
       name="description"
       content="Maalausliike Repton Oy tarjoaa ammattitaitoisia rakennus-, remontti- ja maalauspalveluja Helsingissä, Uudellamaalla ja Suomessa."
     />
 
-    <!-- Logo tässä -->
-    <!-- Favicon (optional, but professional) -->
-    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logo.png" type="image/png" />
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp preview) -->
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Maalausliike Repton Oy | Rakennus- ja maalauspalvelut Suomessa"
@@ -70,7 +57,7 @@ import Footer from "../components/Footer.astro";
     <meta property="og:url" content="https://www.repton.fi" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card (Twitter/X preview) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -90,14 +77,56 @@ import Footer from "../components/Footer.astro";
       rel="stylesheet"
     />
 
-    <!-- Site CSS -->
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/styles/tailwind.css" />
+
+    <!-- Alpine.js (optional) -->
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-      defer></script>
+    ></script>
+
+    <!-- Loader‐hide script -->
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loading-screen");
+          if (loader) loader.classList.add("opacity-0", "pointer-events-none");
+        }, 600);
+      });
+    </script>
   </head>
 
-  <body class="bg-gray-300">
+  <body class="bg-gray-300 font-poppins">
+    <!-- ─── FULLSCREEN LOADER ─── -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 bg-white z-50 flex items-center justify-center gap-6
+           transition-opacity duration-300"
+    >
+      <!-- always visible -->
+      <img
+        src="/images/logosvg.svg"
+        alt="Repton Van 1"
+        class="w-64 animate-drive"
+      />
+
+      <!-- hidden on phones, shows from sm upward -->
+      <img
+        src="/images/logosvg.svg"
+        alt="Repton Van 2"
+        class="hidden sm:inline w-64 animate-drive delay-200"
+      />
+
+      <!-- hidden on phones and tablets, shows from md upward -->
+      <img
+        src="/images/logosvg.svg"
+        alt="Repton Van 3"
+        class="hidden md:inline w-64 animate-drive delay-400"
+      />
+    </div>
+
+    <!-- ─── YOUR ACTUAL SITE CONTENT ─── -->
     <Header />
     <main class="pt-10">
       <slot />

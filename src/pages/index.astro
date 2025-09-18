@@ -20,8 +20,8 @@ import Contactform from "../components/Contactform.astro";
               Olemme kotimainen, vuonna 2002 perustettu maalaus- ja
               pintakäsittelyalan ammattiliike. Toimimme ylpeästi suomalaisena
               yrityksenä, tarjoten asiakkaillemme kestävää ja laadukasta
-              työnjälkeä niin remontti- kuin maalaustöissäkin – aina
-              luotettavasti ja ammattitaidolla.
+              työnjälkeä niin remontti- kuin maalaustöissäkin aina luotettavasti
+              ja ammattitaidolla.
             </p>
             <p>
               Toimialueemme kattaa pääkaupunkiseudun ja Päijät-Hämeen, mutta
@@ -35,7 +35,7 @@ import Contactform from "../components/Contactform.astro";
             </p>
             <p>
               Käytämme laadukkaita materiaaleja ja hyödynnämme kotimaista
-              osaamista – kokeneella tiimillämme varmistamme työnjäljen, johon
+              osaamista kokeneella tiimillämme varmistamme työnjäljen, johon
               asiakkaamme voivat luottaa.
             </p>
           </div>
@@ -111,8 +111,7 @@ import Contactform from "../components/Contactform.astro";
         <div
           class="bg-white p-12 rounded-xl shadow-lg text-base italic min-h-[200px]"
         >
-          "Hienosti hoidettu urakka, en muista että olisi koskaan mennyt
-          projekti näin jouhevasti."<br /><strong>– Anni</strong>
+          "Hienosti hoidettu urakka..."<br /><strong>– Anni</strong>
         </div>
         <div
           class="bg-white p-12 rounded-xl shadow-lg text-base italic min-h-[200px]"
@@ -137,64 +136,167 @@ import Contactform from "../components/Contactform.astro";
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
-  <section
-    class="bg-gray-300 text-gray-900 font-montserrat py-20 overflow-hidden"
-  >
-    <div class="container mx-auto px-4">
-      <h3
-        class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12"
+  <!-- GALLERY SECTION (one heading only) -->
+  <section class="bg-gray-300 py-20 overflow-hidden font-montserrat">
+    <div class="max-w-[2000px] mx-auto px-4">
+      <h2
+        class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
       >
         Töitämme
-      </h3>
-      <div class="relative overflow-hidden">
-        <div class="flex animate-scroll gap-6 whitespace-nowrap">
-          <!-- first set -->
+      </h2>
+
+      <!-- HORIZONTAL SCROLLABLE IMAGE ROW -->
+      <div class="overflow-x-auto scroll-smooth">
+        <div class="flex gap-6 whitespace-nowrap">
+          <!-- Julkisivut -->
           <img
-            src="/images/sis2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk1.jpeg"
+            alt="Julkisivumaalaus – kerrostalon ulkoseinä maalattuna"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/rem1.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk2.jpeg"
+            alt="Julkisivumaalaus – valkoinen puutalo huoltomaalauksen jälkeen"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/kat1.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/julk6.jpeg"
+            alt="Julkisivumaalaus – moderni valkoinen puutalo"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          />
+
+          <!-- Kattotyöt -->
+          <img
+            src="/images/kat2.jpeg"
+            alt="Kattotyöt – vaalea harmaa peltikatto savupiipuilla"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis3.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/kat6.jpeg"
+            alt="Kattotyöt – suuri punainen peltikatto"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/rem2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <!-- duplicate set for seamless -->
-          <img
-            src="/images/sis2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/kat7.jpeg"
+            alt="Kattotyöt – historiallinen kirkko kupolikattoineen"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/rem1.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/kat20.jpg"
+            alt="Kattotyöt – vaalea peltikatto kirkasta taivasta vasten"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          />
+
+          <!-- Porras -->
+          <img
+            src="/images/sis5.jpeg"
+            alt="Porrasremontti – sisäänkäynnin uudet portaat ja kaiteet"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/kat1.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/sis7.jpeg"
+            alt="Porrasremontti – porraskäytävä maalattuna"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
+          />
+
+          <!-- Sisäremontit -->
+          <img
+            src="/images/rem4.jpeg"
+            alt="Sisäremontti – moderni keittiö saarekkeella"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/sis3.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/rem5.jpeg"
+            alt="Sisäremontti – historiallinen porrashuone yksityiskohtaisilla kaiteilla"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
           <img
-            src="/images/rem2.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
+            src="/images/rem7.jpeg"
+            alt="Sisäremontti – perinteinen suomalainen sauna"
+            class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer"
           />
         </div>
       </div>
     </div>
   </section>
+
+  <!-- FULLSCREEN MODAL (only used on phones) -->
+  <div
+    id="modal"
+    class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden justify-center items-center"
+  >
+    <button
+      id="closeModal"
+      class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition"
+      aria-label="Sulje">✕</button
+    >
+
+    <!-- Prev / Next (mobile only) -->
+    <button
+      id="prevImage"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition md:hidden"
+      aria-label="Edellinen kuva">‹</button
+    >
+    <button
+      id="nextImage"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition md:hidden"
+      aria-label="Seuraava kuva">›</button
+    >
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Näyttökuva"
+      class="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+    />
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script type="module">
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+    const prevBtn = document.getElementById("prevImage");
+    const nextBtn = document.getElementById("nextImage");
+    const images = [...document.querySelectorAll(".gallery-image")];
+    let currentIndex = 0;
+
+    const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+    function openModalIndex(index) {
+      if (!isMobile()) return;
+      currentIndex = index;
+      modalImage.src = images[currentIndex].src;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    // for inline onclick (kept), and direct clicks
+    window.openModal = (src) => {
+      if (!isMobile()) return;
+      const i = images.findIndex((img) => img.getAttribute("src") === src);
+      openModalIndex(i >= 0 ? i : 0);
+    };
+    images.forEach((img, i) =>
+      img.addEventListener("click", () => openModalIndex(i)),
+    );
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modalImage.src = "";
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImage.src = images[currentIndex].src;
+    });
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImage.src = images[currentIndex].src;
+    });
+  </script>
 
   <!-- CONTACT FORM -->
   <Contactform />

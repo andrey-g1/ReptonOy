@@ -38,49 +38,151 @@ import Contactform from "../../components/Contactform.astro";
     </div>
   </section>
 
-  <!-- GALLERY / CAROUSEL -->
-  <section class="bg-gray-300 py-20 overflow-hidden">
+  <!-- GALLERY SECTION -->
+  <section class="bg-gray-300 py-20 font-montserrat">
     <div class="max-w-[2000px] mx-auto px-4">
       <h2
         class="text-center text-3xl md:text-5xl font-bebas tracking-wide uppercase mb-12 text-gray-900"
       >
-        Töitämme
+        Porrasremontit
       </h2>
-      <div class="relative overflow-hidden">
-        <div class="flex animate-scroll gap-6 whitespace-nowrap">
-          <!-- original set -->
-          <img
-            src="/images/sis5.jpeg"
-            alt="Porraskäytävän valkoiset seinät ja musta katto – sisämaalaus Repton Oy Helsinki"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis6.jpeg"
-            alt="Vihreä ja valkoinen porraskäytävä – sisäremontti koko näkökulmasta – Repton Oy"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis7.jpeg"
-            alt="Valkoinen ja musta porraskäytävä ylhäältä alas kuvattuna – Repton Oy sisämaalaus"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
 
-          <!-- duplicate set for seamless loop -->
-          <img
-            src="/images/sis5.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis6.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-          <img
-            src="/images/sis7.jpeg"
-            class="w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0"
-          />
-        </div>
+      <!-- Scrollable image row -->
+      <div
+        class="overflow-x-auto whitespace-nowrap flex gap-6 pb-4 scroll-smooth"
+      >
+        <img
+          src="/images/sis5.jpeg"
+          alt="Julkisivumaalaus – omakotitalon julkisivu maalattuna"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition"
+          onclick="openModal('/images/sis5.jpeg')"
+        />
+        <img
+          src="/images/sis6.jpeg"
+          alt="Julkisivumaalaus – puutalon ulkoseinä huoltomaalauksen jälkeen"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition"
+          onclick="openModal('/images/sis6.jpeg')"
+        />
+        <img
+          src="/images/sis7.jpeg"
+          alt="Julkisivumaalaus – omakotitalon ulkoverhous maalattuna"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition"
+          onclick="openModal('/images/sis7.jpeg')"
+        />
+        <img
+          src="/images/sis8.jpeg"
+          alt="Julkisivumaalaus – omakotitalon julkisivu viimeisteltynä"
+          class="gallery-image w-[320px] h-[320px] object-cover rounded shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition"
+          onclick="openModal('/images/sis8.jpeg')"
+        />
       </div>
     </div>
+
+    <!-- Modal (mobile-only navigation buttons are visible on small screens) -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/80 z-50 hidden justify-center items-center p-4"
+    >
+      <div class="relative max-w-4xl w-full">
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition"
+          aria-label="Sulje"
+        >
+          ✕
+        </button>
+
+        <!-- Prev / Next (hidden on md and up) -->
+        <button
+          id="prevImage"
+          class="md:hidden absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition"
+          aria-label="Edellinen kuva">‹</button
+        >
+        <button
+          id="nextImage"
+          class="md:hidden absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl font-bold px-2 hover:text-gray-300 transition"
+          aria-label="Seuraava kuva">›</button
+        >
+
+        <img
+          id="modalImage"
+          src=""
+          alt="Näyttökuva"
+          class="w-full max-h-[80vh] object-contain rounded-lg"
+        />
+      </div>
+    </div>
+
+    <!-- Script (mobile-only modal + prev/next + swipe; desktop clicks ignored) -->
+    <script type="module">
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const closeModalBtn = document.getElementById("closeModal");
+      const prevBtn = document.getElementById("prevImage");
+      const nextBtn = document.getElementById("nextImage");
+      const images = [...document.querySelectorAll(".gallery-image")];
+
+      let currentIndex = 0;
+
+      const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+      function openModalIndex(index) {
+        if (!isMobile()) return;
+        currentIndex = index;
+        modalImage.src = images[currentIndex].getAttribute("src");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      // keep inline onclicks working
+      window.openModal = (src) => {
+        if (!isMobile()) return;
+        const idx = images.findIndex((img) => img.getAttribute("src") === src);
+        openModalIndex(idx >= 0 ? idx : 0);
+      };
+
+      images.forEach((img, i) => {
+        img.addEventListener("click", () => openModalIndex(i));
+      });
+
+      function closeModal() {
+        modal.classList.add("hidden");
+        modalImage.src = "";
+      }
+      closeModalBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImage.src = images[currentIndex].getAttribute("src");
+      });
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImage.src = images[currentIndex].getAttribute("src");
+      });
+
+      // swipe
+      let startX = 0;
+      modal.addEventListener(
+        "touchstart",
+        (e) => {
+          startX = e.touches[0].clientX;
+        },
+        { passive: true },
+      );
+      modal.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const dx = endX - startX;
+        if (Math.abs(dx) > 40) {
+          if (dx > 0) prevBtn.click();
+          else nextBtn.click();
+        }
+      });
+    </script>
   </section>
 
   <!-- CONTACT FORM -->

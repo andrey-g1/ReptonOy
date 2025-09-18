@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <!-- KIITOS SECTION (no card/box) -->
+    <section class="bg-gray-300 text-gray-900 font-montserrat py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="font-bebas text-4xl md:text-5xl mb-4">KIITOS!</h1>
+
+            <p class="text-lg md:text-xl">
+                Viestisi on vastaanotettu. Meillä on homma käynnissä – palaamme
+                sinulle mahdollisimman pian.
+            </p>
+            <p class="text-base mt-2 text-gray-700">
+                Työskentelemme parhaillaan työmailla ja vastaamme yleensä saman
+                tai seuraavan arkipäivän aikana.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                    href="/"
+                    class="inline-flex items-center justify-center rounded-full px-8 py-3
+                 bg-white border border-green-800 text-green-800 font-semibold
+                 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-800/40"
+                    aria-label="Palaa etusivulle"
+                >
+                    Palaa etusivulle
+                </a>
+
+                <a
+                    href="/yhteystiedot"
+                    class="inline-flex items-center justify-center rounded-full px-8 py-3
+                 bg-green-800 text-white font-semibold
+                 hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-800/40"
+                    aria-label="Yhteystiedot"
+                >
+                    Yhteystiedot
+                </a>
+            </div>
+        </div>
+
+        <!-- IMAGES (second hidden on mobile) -->
+        <div class="max-w-5xl mx-auto mt-10 px-4">
+            <img
+                src="/images/work1.jpeg"
+                alt="Ulkoverhouslautojen maalaus työmaalla – maalari ruiskumaalaa valkoisia ulkoverhouslautoja suojapeitteiden päällä."
+                class="w-full rounded-2xl shadow-xl object-cover"
+            />
+            <img
+                src="/images/work2.jpeg"
+                alt="Katon pesu ja pinnoitus – asentaja pesee peltikattoa korkeapaineella kirkkaana päivänä."
+                class="w-full rounded-2xl shadow-xl object-cover mt-6 hidden md:block"
+            />
+        </div>
+    </section>
+</Layout>

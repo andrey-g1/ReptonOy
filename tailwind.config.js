@@ -14,9 +14,14 @@ export default {
         light: '#e0e0e0',
       },
       animation: {
-        scroll: 'scroll 40s linear infinite',
+        drive: 'drive 1.5s ease-out forwards',
+        scroll: 'scroll 15s linear infinite',
       },
       keyframes: {
+        drive: {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
@@ -26,6 +31,9 @@ export default {
   },
   plugins: [],
 };
+
+
+
 
 
 
